@@ -1,0 +1,46 @@
+.container{
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-content: center;
+  border: #000 2px solid;
+}
+.score-board{
+  width: 100px;
+  height: 100px;
+  margin:10px 10px 10px 10px;
+}
+.player_score{
+  width: 100px;
+  height: 100px;
+  border: #000 2px solid;
+  display: inline;
+  margin:3px auto 3px auto;
+}
+
+.playing-board{
+  height: 80%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#row_1{
+  margin-left: auto;
+  margin-right: auto;
+  border: #000 2px solid;
+  
+}
+#row_2{
+  margin-top: 2px;
+  border: #000 2px solid;
+}
+.card{
+  height: 350px;
+  width: 200px;
+  background-color: green;
+  display: inline-grid;
+  margin: 3px 0px 3px 0px;
+  align-content: center;
+}
