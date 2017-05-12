@@ -1,26 +1,39 @@
 $(document).ready(function(){
 
-var cards = ["A","A","B","B","C","C"];
 var randomizedOrder = [];
 var currentlyFlipped= [];
 var cardsFlipped = 0;
+var cardArr =[];
 
 //functin to shuffle order of cards and store them in new array
-function shuffle (cards) {
+
+for ( let i =0; i < $('.card').length; i++){
+  cardArr.push($(".card")[i]);
+}
+
+console.log(cardArr);
+
+function shuffle (cardArr) {
   var i = 0
     , j = 0
     , temp = null
 
-  for (i = cards.length - 1; i > 0; i -= 1) {
+  for (i = cardArr.length - 1; i > 0; i -= 1) {
     j = Math.floor(Math.random() * (i + 1))
-    temp = cards[i]
-    cards[i] = cards[j]
-    cards[j] = temp
+    temp = cardArr[i]
+    cardArr[i] = cardArr[j]
+    cardArr[j] = temp
   }
-  return cards;
+  return cardArr;
 }
- shuffle(cards);
-console.log(cards);
+shuffle(cardArr);
+console.log(cardArr);
+
+
+/////for loop and assigning shuffled cards
+
+
+
 
 // generate game-board
 //on click of a card, should flip
