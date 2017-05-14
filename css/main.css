@@ -38,16 +38,17 @@
   border: #000 2px solid;
 }
 .card-container{
-  display:inline;
+  height: 350px;
+  width: 200px;
+  display:inline-block;
   align-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  border: #000 2px solid;
 }
 .card{
   height: 350px;
   width: 200px;
   background-color: green;
-  display: inline-grid;
+  display: none;
   margin: 3px 0px 3px 0px;
   align-content: center;
 }
