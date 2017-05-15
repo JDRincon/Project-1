@@ -1,0 +1,23 @@
+Project-1
+
+Explanations of the technologies used:
+
+For this project I primarily used Atom, the terminal and google search
+
+Approach taken:
+
+I really wanted to do this on my own so I tried using the games we used in class as a guide. I tried to google how to create a memory game but a lot of the code I saw was things I was unfamiliar with and I wasn't sure where I would be crossing the line into plagiarism. I relied heavily on the html and css, which is where I think I went wrong since while I was looking over other approaches online it seems they did almost everything in Javasscript/JQuery. My HTML is really crowded with DIV after DIV and a bunch of classes.
+
+User stories:
+
+Wireframes: https://wireframe.cc/BWqgKS
+
+How-to-use instructions: 1)First player takes turn trying to find a match by flipping over two cards 2)If the cards match then the player gets a point and player's turn ends OR if not a match then flip cards back over and the player's turn is over 3)Once all the cards are matched the game is over 4)Count score and player with the most points wins
+
+Unsolved problems:
+
+Shuffle only works in console OR once matching function is introduced the shuffle function doesn't work.
+Matching function does not work, it always evaluate to true and add a score to the player. The on click function isnt pushing the ID into the card. Not sure why.
+Couldn't figure out how to switch between players.
+Couldn't center cards.
+Couldn't hide cards after second click and no match was found.

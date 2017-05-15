@@ -47,7 +47,7 @@ function clickedCard(){
       $('.card-container').off("click");
 
       checkMatch();
-
+      //playerTracker++;
     }
   //  console.log(cardsFlipped);
   });
