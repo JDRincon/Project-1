@@ -5,6 +5,8 @@ var currentlyFlipped= [];
 var cardsFlipped = 0;
 var cardArr =[];
 var score = 0;
+var $playerOneScore = $("#player_one_score")
+var $playerTwoScore = $("#player_one_score")
 
 //storing divs into the cardArr empty array. using push to place them in card Arr
 for ( let i =0; i < $('.card-container').length; i++){
@@ -12,7 +14,7 @@ for ( let i =0; i < $('.card-container').length; i++){
 }
 
 //functin to shuffle order of cards and store them in new array
-function shuffle (arr) {
+function shuffle(arr) {
   var i = 0
     , j = 0
     , temp = null
@@ -27,22 +29,25 @@ function shuffle (arr) {
 };
 
 shuffle(cardArr);
-console.log(shuffle(cardArr));
+
 
 //on click of a card, should flip
 function clickedCard(){
   cardsFlipped = 0;
   shuffle(cardArr);
+
   $('.card-container').on("click",function(){
     $(this).children().eq(0).show();
     console.log($(this).children());
-    firstPick = $(this).attr('id');
+    //not pushing the card ID?
+    cardChosen = $(this).attr('id');
     currentlyFlipped.push();
     cardsFlipped++;
     if(cardsFlipped === 2){
       $('.card-container').off("click");
 
       checkMatch();
+
     }
   //  console.log(cardsFlipped);
   });
@@ -52,30 +57,19 @@ clickedCard();
 
 var checkMatch = function(){
   if (currentlyFlipped[0] !== currentlyFlipped[1]){
-    console.log("try again");
+    console.log("try again ");
+    // will face them down?
+    $('.card-container').toggle();
   } else {
-    console.log("found a match");
+  //will always be true b/c of card ID???
+    score += 1;
+    console.log("found a match " + score);
+    $playerOneScore.text(score + "Point(s)");
   }
 }
 
 
-/*
-
-
-//Look for Pair id, if a match remove card from board and add point to player_score
-
-if(firstPick === secondPick){
-  console.log("Found a match");
-  player_one++;
-} else {
-  //flip back around
-}
-
 //toggle player
-//click two and after a fews it will face down again
-
-*/
-
 
 
 
