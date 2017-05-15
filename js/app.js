@@ -28,20 +28,19 @@ function shuffle(arr) {
   return arr;
 };
 
-shuffle(cardArr);
 
 
 //on click of a card, should flip
 function clickedCard(){
   cardsFlipped = 0;
-  shuffle(cardArr);
+  let shuffledCards = shuffle(cardArr);
 
   $('.card-container').on("click",function(){
     $(this).children().eq(0).show();
     console.log($(this).children());
     //not pushing the card ID?
     cardChosen = $(this).attr('id');
-    currentlyFlipped.push();
+    currentlyFlipped.push(cardChosen);
     cardsFlipped++;
     if(cardsFlipped === 2){
       $('.card-container').off("click");
@@ -59,6 +58,7 @@ var checkMatch = function(){
   if (currentlyFlipped[0] !== currentlyFlipped[1]){
     console.log("try again ");
     // will face them down?
+   //use the ids in the currentlyflipped to access elements on the DOM
     $('.card-container').toggle();
   } else {
   //will always be true b/c of card ID???
@@ -70,7 +70,10 @@ var checkMatch = function(){
 
 var playerTracker=[];
 
-if(playerTracker%2 === 0){
+  
+let turn = 0
+
+if(turn % 2 === 0){
   //it is player 1's turn
 } else {
   //it is player 2's turn
