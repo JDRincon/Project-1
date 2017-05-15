@@ -68,6 +68,13 @@ var checkMatch = function(){
   }
 }
 
+var playerTracker=[];
+
+if(playerTracker%2 === 0){
+  //it is player 1's turn
+} else {
+  //it is player 2's turn
+}
 
 //toggle player
 
